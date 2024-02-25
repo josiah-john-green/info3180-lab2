@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+    <div class="profile">
+        <img class="profile-img" src="{{ url_for('static', filename='css/profile.jpg') }}" alt="Profile Image">
+    
+        <h1 class="profile-name">  {{ name }} </h1>
+        
+        <p class="profile-username"> @josiahjohngreen </p>
+        <p class="profile-location"> Kingston, Jamaica. </p>
+        <p class="profile-join"> Joined {{ formatted_date }} </p>
+    </div>    
+
+    <p class="profile-description"> I am a smart and talented young man who loves website design and development. <br> Contact me 
+        if you'd like to work together on a new project. </br> 
+    </p>
+
+    <div class="socials">
+        <div class="posts" id="social">
+            <h1> 7 </h1>
+            <p> Posts </p>
+        </div>
+
+        <div class="following" id="social">
+            <h1> 100 </h1>
+            <p> Following </p>
+        </div>
+
+        <div class="followers" id="social">
+            <h1> 250</h1>
+            <p> Followers </p>
+        </div>
+    </div>
+
+    <button class="follow" id="btn"> Follow </button>
+{% endblock %}

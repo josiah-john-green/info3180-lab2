@@ -1,4 +1,5 @@
 from app import app
+from datetime import datetime
 from flask import render_template, request, redirect, url_for, flash
 
 
@@ -15,8 +16,28 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Josiah-John Green")
 
+
+def format_date_joined(date):
+    """Formats the given date as Month, Year."""
+    return date.strftime('%B, %Y')
+
+
+###
+# The profile view function using the format_date_joined function
+### 
+
+@app.route('/profile/')
+def profile():
+
+    # Assuming you have a user with a 'date_joined' attribute
+    user = {'username': 'Josiah-John Green', 'date_joined': datetime(2022, 2, 10)}
+
+    # Use the format_date_joined function to format the date
+    formatted_date = format_date_joined(user['date_joined'])
+
+    return render_template('profile.html', name=user['username'], formatted_date=formatted_date)
 
 ###
 # The functions below should be applicable to all Flask apps.
@@ -27,7 +48,6 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
-
 
 @app.after_request
 def add_header(response):

@@ -1,3 +1,75 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body 
+{
+
+    font-family: "Jost", sans-serif;
     padding-top: 5rem;
+    align-content: center;
+    text-align: center;
+
+}
+
+.profile 
+{
+
+    background-image: url('blurred.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Adjust as needed: 'cover', 'contain', or specific dimensions */
+    background-position: center center; /* Adjust the position as needed */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    margin: 0;
+    padding: 0;
+    color: white;
+    margin: -24px -1000px 0px -1000px;
+    padding: 20px 200px 20px 200px;
+     
+}
+
+.profile-description
+{
+
+    padding-top: 30px;        
+
+}
+
+.profile-img 
+{
+
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.socials
+{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 0px 20px 0px;
+
+}
+
+.follow
+{
+
+    background-color: #08457a;
+    color: white;
+    border-radius: 10px;
+    border: transparent;
+    padding: 10px 55px 10px 55px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.follow:hover
+{
+
+    background-color: #227ccb;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
 }
